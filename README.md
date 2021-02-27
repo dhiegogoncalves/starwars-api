@@ -4,7 +4,7 @@
 
 ## :books: Tecnologias
 
-Esse projeto foi desenvolvido com:
+Este projeto foi desenvolvido com:
 
 -   [Spring Boot](https://spring.io/projects/spring-boot)
 -   [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb)
