@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  starwars_mongodb:
+    image: mongo:4.4.4-bionic
+    restart: always
+    environment:
+      TZ: America/Sao_Paulo
+      MONGO_INITDB_ROOT_USERNAME: docker
+      MONGO_INITDB_ROOT_PASSWORD: docker
+      MONGO_INITDB_DATABASE: starwars_database
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data/db
+    networks:
+      - starwars-network
+  
+  starwars_api:
+    image: starwars_api
+    restart: always
+    build: .
+    environment:
+      - TZ=America/Sao_Paulo
+      - SERVER_PORT=8080
+      - SPRING_DATA_MONGODB_HOST=starwars_mongodb
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=starwars_database
+      - SPRING_DATA_MONGODB_AUTHENTICATION_DATABASE=admin
+      - SPRING_DATA_MONGODB_USERNAME=docker
+      - SPRING_DATA_MONGODB_PASSWORD=docker      
+    ports:
+      - 8080:8080
+    links:
+      - starwars_mongodb
+    depends_on:
+      - starwars_mongodb
+    networks:
+      - starwars-network
+
+volumes:
+    data:
+
+networks:
+    starwars-network:
+        driver: bridge
