@@ -39,14 +39,14 @@ O Projeto é uma API contendo um CRUD dos planetas do universo do Star Wars.
 
 ---
 
-Clone o repositório.
+1. Clone o repositório.
 
 ```console
 git clone https://github.com/dhiegogoncalves/starwars-api.git
 cd starwars-api
 ```
 
-Dentro da pasta do projeto verifique a conexão com o banco de dados mongodb nos arquivos `src/main/resources/application-test.properties` e `src/main/resources/application.properties`.
+2. Dentro da pasta do projeto verifique a conexão com o banco de dados mongodb nos arquivos `src/main/resources/application-test.properties` e `src/main/resources/application.properties`.
 
 ```console
 spring.data.mongodb.host=localhost
@@ -54,7 +54,7 @@ spring.data.mongodb.port=28017
 spring.data.mongodb.database=test_database
 ```
 
-Execute o comando abaixo para iniciar o projeto.
+3. Eexecute o comando abaixo para iniciar o projeto.
 
 ```console
 mvn spring-boot:run
@@ -62,13 +62,15 @@ mvn spring-boot:run
 
 Em seguida, acesse o link [http://localhost:5000/swagger-ui/](http://localhost:5000/swagger-ui/).
 
-Caso queira executar o `docker-compose` na pasta do projeto execute o comando abaixo para dar build no projeto.
+---
+
+4. Caso queira executar o `docker-compose` na pasta do projeto execute o comando abaixo para dar build no projeto.
 
 ```console
 mvn clean package
 ```
 
-Execute o comando abaixo para iniciar o projeto utilizando docker-compose.
+5. Execute o comando abaixo para iniciar o projeto utilizando docker-compose.
 
 ```console
 docker-compose up --build
