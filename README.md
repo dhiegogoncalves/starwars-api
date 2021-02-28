@@ -8,14 +8,14 @@ Este projeto foi desenvolvido com:
 
 -   [Spring Boot](https://spring.io/projects/spring-boot)
 -   [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb)
--   [Project Lombok](https://projectlombok.org/)
--   [modelmapper](http://modelmapper.org/)
+-   [Lombok](https://projectlombok.org/)
+-   [ModelMapper](http://modelmapper.org/)
 -   [JaCoCo](https://www.jacoco.org/jacoco/)
--   [springfox](https://github.com/springfox/springfox)
+-   [Swagger](https://github.com/springfox/springfox)
 
 ## :computer: Projeto
 
-O Projeto é um teste sendo uma API dos planetas do universo do Star Wars.
+O Projeto é uma API dos planetas do universo do Star Wars implementando o conceito CRUD.
 
 <p align="center">
     <img src="img/starwars-api.png" alt="drawing" width="900"/>
