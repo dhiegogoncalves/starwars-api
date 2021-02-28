@@ -15,7 +15,7 @@ Este projeto foi desenvolvido com:
 
 ## :computer: Projeto
 
-O Projeto é uma API dos planetas do universo do Star Wars implementando o conceito CRUD.
+O Projeto é uma API contendo um CRUD dos planetas do universo do Star Wars.
 
 <p align="center">
     <img src="img/starwars-api.png" alt="drawing" width="900"/>
